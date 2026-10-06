@@ -77,15 +77,16 @@ nav ul a:hover{color:#fff}
 .step-list p{color:rgba(255,255,255,.4);font-size:20px;font-weight:500}
 
 /* about */
-.about{display:grid;grid-template-columns:1fr minmax(280px,500px);gap:clamp(30px,6vw,120px);align-items:center;padding-block:40px}
+.about{display:grid;grid-template-columns:1fr minmax(320px,580px);gap:clamp(30px,6vw,120px);align-items:center;padding-block:40px}
 .about h2{font-size:clamp(30px,3.2vw,48px);margin-top:70px;max-width:900px}
 .about p{font-size:clamp(17px,1.6vw,23px);color:var(--muted);margin-top:22px;max-width:980px}
 .about p+p{margin-top:0}
 .chips{display:flex;flex-wrap:wrap;gap:22px 20px;list-style:none;margin-top:40px}
 .chips li{display:flex;gap:12px;align-items:center;border:3px dashed #dccdd0;border-radius:999px;padding:14px 22px;font:500 22px var(--sans)}
 .chips li::before{content:"★";color:#ffc400;font-size:28px;line-height:1}
-.video{background:#e8e8e8;border-radius:40px;aspect-ratio:500/650;display:grid;place-items:center;font:500 28px var(--sans);overflow:hidden}
-.video video,.video iframe{width:100%;height:100%;object-fit:cover;border:0}
+.videos{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.video{background:#e8e8e8;border-radius:32px;aspect-ratio:9/14;overflow:hidden;box-shadow:0 6px 24px rgba(74,10,10,.15)}
+.video video{width:100%;height:100%;object-fit:cover;display:block;background:#000}
 
 /* reviews */
 .reviews{padding-block:40px 70px}
@@ -145,6 +146,8 @@ footer .legal{font-size:20px;margin:0}
 }
 @media (max-width:600px){
   .cards{grid-template-columns:1fr}
+  .videos{grid-template-columns:1fr}
+  .video{aspect-ratio:9/12}
   .flags span{width:46px;height:46px;font-size:24px}.flags{gap:10px}
   .wa{font-size:17px}
   .row{flex-direction:column;gap:0}
@@ -152,6 +155,25 @@ footer .legal{font-size:20px;margin:0}
   .stats span,.step-list p,footer p{font-size:17px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+
+/* Sticky mobile bar */
+.mobile-bar{display:none}
+@media (max-width:768px){
+  .mobile-bar{
+    display:flex;gap:14px;position:fixed;left:0;right:0;bottom:0;z-index:50;
+    padding:14px 16px calc(14px + env(safe-area-inset-bottom,0px));
+    background:#3f1411;
+  }
+  .mobile-bar a{
+    flex:1;display:flex;align-items:center;justify-content:center;gap:10px;
+    padding:14px 10px;border:1px solid #fff;border-radius:999px;
+    color:#fff;font:600 18px var(--sans);
+  }
+  .mb-wa{background:#4fb83f}
+  .mb-book{background:#512b29}
+  body{padding-bottom:88px} /* keeps the footer from hiding behind the bar */
+  /* .hero-foot .wa{display:none} */ /* uncomment to hide the hero WhatsApp button on mobile */
+}
 </style>
 </head>
 <body>
@@ -180,11 +202,11 @@ footer .legal{font-size:20px;margin:0}
         <div><b>★ 4.9/5</b><span>From 2,300 reviews</span></div>
       </div>
     </div>
-    <div class="hero-photo"><img src="images/hero.jpg" alt="Yash Sharma meditating beside a sacred fire"></div>
+    <div class="hero-photo"><img src="/assets/hero1.jpg" alt="Yash Sharma meditating beside a sacred fire"></div>
   </div>
   <div class="hero-foot">
     <div class="flags" aria-label="Clients in India, USA, UK, Canada, China and Israel"><span>🇮🇳</span><span>🇺🇸</span><span>🇬🇧</span><span>🇨🇦</span><span>🇨🇳</span><span>🇮🇱</span></div>
-    <a class="btn wa" href="https://wa.me/910000000000" target="_blank" rel="noopener">
+    <a class="btn wa" href="https://wa.me/919878762216" target="_blank" rel="noopener">
       <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M3 21l1.6-4.7A9 9 0 1 1 8 19.6L3 21z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2L9 8.5z" fill="#fff" stroke="none"/></svg>
       Chat on Whatsapp</a>
   </div>
@@ -225,7 +247,14 @@ footer .legal{font-size:20px;margin:0}
       <li>Featured on regional TV</li><li>No fear-based remedies</li>
     </ul>
   </div>
-  <div class="video" id="video">Add Video here</div>
+  <div class="videos">
+    <figure class="video">
+      <video src="assets/video1.mp4" controls playsinline preload="metadata" aria-label="Video 1: Yash Sharma on his approach to astrology"></video>
+    </figure>
+    <figure class="video">
+      <video src="assets/video2.mp4" controls playsinline preload="metadata" aria-label="Video 2: Yash Sharma on how a session works"></video>
+    </figure>
+  </div>
 </section>
 
 <!-- 5. REVIEWS -->
@@ -287,9 +316,18 @@ footer .legal{font-size:20px;margin:0}
   <p class="legal">Placeholder content for design purposes. Astrology is a belief-based practice and results vary.</p>
 </footer>
 
+<!-- Sticky mobile bar -->
+<div class="mobile-bar">
+  <a class="mb-wa" href="https://wa.me/919878762216" target="_blank" rel="noopener">
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M3 21l1.6-4.7A9 9 0 1 1 8 19.6L3 21z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2L9 8.5z" fill="#fff" stroke="none"/></svg>
+    WhatsApp
+  </a>
+  <a class="mb-book" href="#contact">Book Session</a>
+</div>
+
 <script>
 // Service cards
-const PHONE="+91 0000000000";
+const PHONE="+919878762216";
 const services=[
  ["Love Problem Solution","There are many people who need to get family problem solution using astrology surely helps a person to get what they actually want. Consult With Yash Sharma Ji."],
  ["Get Your Love Back","Being in love but apart is painful don’t let love problems weigh you down when astrology offers trusted ways to reunite. Consult right now"],
@@ -302,19 +340,23 @@ const services=[
  ["Relationship Problem","If your ideal relationship is falling apart, don’t worry. Astrology can help resolve troubles and rebuild love. Connect with us."]
 ];
 document.getElementById("cards").innerHTML=services.map((s,i)=>
- `<article class="card"><img src="images/service-${i+1}.jpg" alt="${s[0]}" loading="lazy"><h3>${s[0]}</h3><p>${s[1]}</p><a class="btn btn-maroon" href="tel:${PHONE.replace(/\s/g,"")}">Call${PHONE}</a></article>`).join("");
+ `<article class="card"><img src="assets/service-${i+1}.png" alt="${s[0]}" loading="lazy"><h3>${s[0]}</h3><p>${s[1]}</p><a class="btn btn-maroon" href="tel:${PHONE.replace(/\s/g,"")}">Call${PHONE}</a></article>`).join("");
 
 // Mobile menu
 const mb=document.querySelector(".menu-btn"),menu=document.getElementById("menu");
 mb.addEventListener("click",()=>{const o=menu.classList.toggle("open");mb.setAttribute("aria-expanded",o)});
 menu.addEventListener("click",e=>{if(e.target.tagName==="A"){menu.classList.remove("open");mb.setAttribute("aria-expanded",false)}});
 
+// Videos: only one plays at a time
+const vids=document.querySelectorAll(".video video");
+vids.forEach(v=>v.addEventListener("play",()=>vids.forEach(o=>{if(o!==v)o.pause()})));
+
 // FAQ: one open at a time
 document.querySelectorAll("#faq details").forEach(d=>d.addEventListener("toggle",()=>{
   if(d.open)document.querySelectorAll("#faq details").forEach(o=>{if(o!==d)o.open=false})}));
 
 // Form: opens WhatsApp with the details (replace the number below)
-const WA_NUMBER="910000000000";
+const WA_NUMBER="919878762216";
 document.getElementById("form").addEventListener("submit",e=>{
   e.preventDefault();
   const f=e.target,m=document.getElementById("msg"),v=n=>f[n].value.trim();
