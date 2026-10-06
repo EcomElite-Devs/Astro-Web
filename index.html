@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yash Sharma | Vedic Astrologer</title>
+<meta name="description" content="Honest Vedic guidance on career, marriage and timing from an astrologer with 18 years of practice.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --maroon:#4a0a0a; --maroon-2:#5a0d0d; --pink:#ffeeee; --ink:#222; --muted:#6b6b6b;
+  --line:#d9c9cc; --btn:linear-gradient(180deg,#4d1111 0%,#8a3535 100%);
+  --serif:"Source Serif 4",Georgia,serif; --sans:Inter,system-ui,sans-serif;
+  --pad:clamp(20px,4.2vw,80px);
+  --mandala:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' fill='none' stroke='%23d9a05b' stroke-width='1.2'%3E%3Ccircle cx='200' cy='200' r='190'/%3E%3Ccircle cx='200' cy='200' r='140'/%3E%3Ccircle cx='200' cy='200' r='90'/%3E%3Cg%3E%3Cpath id='p' d='M200 10C240 70 240 130 200 200 160 130 160 70 200 10Z'/%3E%3Cuse href='%23p' transform='rotate(45 200 200)'/%3E%3Cuse href='%23p' transform='rotate(90 200 200)'/%3E%3Cuse href='%23p' transform='rotate(135 200 200)'/%3E%3Cuse href='%23p' transform='rotate(180 200 200)'/%3E%3Cuse href='%23p' transform='rotate(225 200 200)'/%3E%3Cuse href='%23p' transform='rotate(270 200 200)'/%3E%3Cuse href='%23p' transform='rotate(315 200 200)'/%3E%3C/g%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--sans);color:var(--ink);background:#fff;line-height:1.5}
+img{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid #f0b34a;outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);line-height:1.1}
+h2{font-size:clamp(30px,3.6vw,52px);color:var(--maroon)}
+.wrap{padding-inline:var(--pad)}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:999px;font:600 18px var(--sans);padding:16px 32px;cursor:pointer;transition:transform .15s,filter .15s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.1)}
+.btn-white{background:#fff;color:#111}
+.btn-maroon{background:var(--btn);color:#fff;width:100%;padding:14px 20px;font-size:16px}
+.dark{background:var(--maroon-2) var(--mandala) center/min(900px,120vw) no-repeat;position:relative;color:#fff}
+.dark::before{content:"";position:absolute;inset:0;background:rgba(74,10,10,.9);pointer-events:none}
+.dark>*{position:relative}
+
+/* hero */
+.hero{min-height:100vh;padding-bottom:40px;overflow:hidden;background:#5a0d0d}
+.hero::after{content:"";position:absolute;inset:0;background:url(images/hero.jpg) center/cover;opacity:.18;filter:blur(6px);z-index:0}
+.hero::before{z-index:1;background:linear-gradient(rgba(90,10,10,.82),rgba(74,10,10,.9));}
+.hero>*{z-index:2}
+nav{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;padding-block:36px 0;position:relative}
+.brand b{display:block;font:700 28px var(--serif)}
+.brand span{font:400 18px var(--serif)}
+nav ul{list-style:none;display:flex;gap:42px;margin:6px auto 0 14%;color:rgba(255,255,255,.55);font-size:20px}
+nav ul a:hover{color:#fff}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.5);color:#fff;border-radius:8px;padding:8px 12px;font:500 15px var(--sans);cursor:pointer}
+.hero-grid{display:grid;grid-template-columns:1.45fr 1fr;gap:60px;align-items:end;margin-top:30px}
+.hero h1{font-size:clamp(48px,7.6vw,120px);font-weight:700;letter-spacing:-.01em}
+.hero p.lead{margin:36px 0 36px;font-size:clamp(18px,1.9vw,30px);color:rgba(255,255,255,.45);text-align:justify;max-width:1000px}
+.hero-photo{border:3px solid #fff;border-radius:36px;overflow:hidden;aspect-ratio:680/728;margin-bottom:10px}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.stats{display:flex;gap:clamp(28px,5vw,80px);flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.2);margin-top:40px;padding-top:32px;max-width:1000px}
+.stats b{display:block;font:500 clamp(30px,3.2vw,48px) var(--sans)}
+.stats span{color:rgba(255,255,255,.45);font-size:20px}
+.hero-foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;margin-top:34px}
+.flags{display:flex;gap:20px}
+.flags span{width:80px;height:80px;border-radius:50%;display:grid;place-items:center;font-size:42px;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.wa{background:#18b718;color:#fff;gap:10px;font-size:22px}
+
+/* services */
+.services{background:var(--pink);padding-block:40px 80px}
+.sec-head p{font-size:clamp(18px,1.9vw,28px);color:var(--muted);margin-top:14px}
+.sec-head hr{border:0;border-top:1px solid var(--line);margin-top:40px;max-width:910px}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,360px));gap:36px;justify-content:center;margin-top:40px}
+.card img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:22px;background:#e8cfcf}
+.card h3{font-size:22px;color:var(--maroon);margin:8px 0 6px;font-weight:600}
+.card p{color:var(--muted);font-size:17.5px;line-height:1.45;min-height:7.4em;margin-bottom:18px}
+
+/* steps */
+.steps{padding-block:40px 40px}
+.steps h2{color:#fff}
+.steps .sec-head p{color:rgba(255,255,255,.4)}
+.steps .sec-head hr{max-width:none;border-color:rgba(255,255,255,.25)}
+.step-list{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;list-style:none;padding-block:44px;border-bottom:1px solid rgba(255,255,255,.25);max-width:1200px}
+.step-list b{font:600 46px var(--sans)}
+.step-list h3{font:500 clamp(26px,2.6vw,38px) var(--sans);margin:22px 0 14px}
+.step-list p{color:rgba(255,255,255,.4);font-size:20px;font-weight:500}
+
+/* about */
+.about{display:grid;grid-template-columns:1fr minmax(280px,500px);gap:clamp(30px,6vw,120px);align-items:center;padding-block:40px}
+.about h2{font-size:clamp(30px,3.2vw,48px);margin-top:70px;max-width:900px}
+.about p{font-size:clamp(17px,1.6vw,23px);color:var(--muted);margin-top:22px;max-width:980px}
+.about p+p{margin-top:0}
+.chips{display:flex;flex-wrap:wrap;gap:22px 20px;list-style:none;margin-top:40px}
+.chips li{display:flex;gap:12px;align-items:center;border:3px dashed #dccdd0;border-radius:999px;padding:14px 22px;font:500 22px var(--sans)}
+.chips li::before{content:"★";color:#ffc400;font-size:28px;line-height:1}
+.video{background:#e8e8e8;border-radius:40px;aspect-ratio:500/650;display:grid;place-items:center;font:500 28px var(--sans);overflow:hidden}
+.video video,.video iframe{width:100%;height:100%;object-fit:cover;border:0}
+
+/* reviews */
+.reviews{padding-block:40px 70px}
+.reviews blockquote.big{font:700 clamp(26px,3.3vw,46px)/1.15 var(--serif)}
+.who{color:rgba(255,255,255,.4);font-size:22px;margin-top:10px}
+.small-reviews{display:flex;gap:30px;flex-wrap:wrap;margin-top:34px}
+.small-reviews figure{border-top:1px solid rgba(255,255,255,.25);padding-top:22px;width:min(480px,100%)}
+.small-reviews blockquote{font:500 clamp(22px,2.2vw,32px)/1.4 var(--sans);max-width:470px}
+
+/* contact */
+.contact{background:var(--pink);display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:center;padding-block:40px;min-height:700px}
+.contact h2{font-size:clamp(34px,4vw,60px)}
+.contact .txt p{font-size:clamp(17px,1.7vw,24px);color:var(--muted);margin-top:22px;max-width:780px}
+form{background:#fff;border:2px solid var(--maroon);border-radius:44px;padding:36px 40px;max-width:600px;width:100%;justify-self:end;box-shadow:0 6px 24px rgba(74,10,10,.12)}
+label{display:block;font-size:19px;margin:0 0 8px}
+input,select{width:100%;font:500 19px var(--sans);color:#222;border:2px solid #b8a4a8;border-radius:18px;padding:14px 16px;margin-bottom:18px;background:#fff;appearance:none}
+input::placeholder{color:#c4c4c4}
+input:focus,select:focus{border-color:var(--maroon);outline:none}
+.row{display:flex;gap:20px}.row>div{flex:0 0 calc(50% - 10px);max-width:200px}
+.row>div{max-width:none;flex:1}
+.sel{position:relative}
+.sel::after{content:"";position:absolute;right:20px;top:18px;width:10px;height:10px;border:solid #bbb;border-width:0 3px 3px 0;transform:rotate(45deg);pointer-events:none}
+.note{font-size:15px;color:var(--muted);margin-top:10px}
+#msg{margin-top:12px;font-weight:600;color:#1b7a1b;min-height:1.4em}
+#msg.err{color:#b3261e}
+
+/* faq */
+.faq{padding-block:40px 60px;max-width:1500px;margin-inline:auto}
+.faq h2{margin-bottom:34px}
+details{border-top:1px solid var(--line);padding:22px 20px 22px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;gap:20px;font:600 clamp(20px,2vw,28px) var(--sans);color:var(--maroon)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:34px;line-height:.8;transition:transform .25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:14px;color:var(--muted);font-size:20px;max-width:1000px}
+
+/* footer */
+footer{padding-block:40px 60px}
+.foot{display:flex;flex-wrap:wrap;gap:40px clamp(40px,6vw,110px)}
+footer h4{font:700 28px var(--serif)}
+footer p{color:rgba(255,255,255,.4);font-size:22px;font-weight:500;line-height:1.3;margin-top:6px}
+footer hr{border:0;border-top:1px solid rgba(255,255,255,.25);margin:40px 0 20px}
+footer .legal{font-size:20px;margin:0}
+
+@media (max-width:1000px){
+  nav ul{display:none;position:absolute;top:70px;right:0;left:0;flex-direction:column;gap:0;margin:0;background:#4a0a0a;border-radius:16px;padding:10px 20px;z-index:5}
+  nav ul.open{display:flex}
+  nav ul a{display:block;padding:12px 0}
+  .menu-btn{display:block}
+  .hero-grid,.about,.contact{grid-template-columns:1fr}
+  .hero-photo{max-width:480px}
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .step-list{grid-template-columns:1fr;gap:34px}
+  form{justify-self:stretch}
+  .about h2{margin-top:10px}
+}
+@media (max-width:600px){
+  .cards{grid-template-columns:1fr}
+  .flags span{width:46px;height:46px;font-size:24px}.flags{gap:10px}
+  .wa{font-size:17px}
+  .row{flex-direction:column;gap:0}
+  form{padding:26px 22px}
+  .stats span,.step-list p,footer p{font-size:17px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- 1. HOME -->
+<header class="dark hero wrap" id="home">
+  <nav>
+    <a class="brand" href="#home"><b>Yash Sharma</b><span>Vedic Astrologer</span></a>
+    <ul id="menu">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#how">How it Works</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ul>
+    <button class="menu-btn" aria-expanded="false" aria-controls="menu">Menu</button>
+  </nav>
+  <div class="hero-grid">
+    <div>
+      <h1>Clear answers from your birth chart.</h1>
+      <p class="lead">Honest Vedic guidance on career, marriage and timing, from an astrologer with 18 years of practice. You get a written chart reading and practical next steps, not vague predictions.</p>
+      <a class="btn btn-white" href="#contact">Book a Session</a>
+      <div class="stats">
+        <div><b>18+ Years</b><span>Practising Jyotish</span></div>
+        <div><b>12,000+</b><span>Charts read</span></div>
+        <div><b>★ 4.9/5</b><span>From 2,300 reviews</span></div>
+      </div>
+    </div>
+    <div class="hero-photo"><img src="images/hero.jpg" alt="Yash Sharma meditating beside a sacred fire"></div>
+  </div>
+  <div class="hero-foot">
+    <div class="flags" aria-label="Clients in India, USA, UK, Canada, China and Israel"><span>🇮🇳</span><span>🇺🇸</span><span>🇬🇧</span><span>🇨🇦</span><span>🇨🇳</span><span>🇮🇱</span></div>
+    <a class="btn wa" href="https://wa.me/910000000000" target="_blank" rel="noopener">
+      <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" aria-hidden="true"><path d="M3 21l1.6-4.7A9 9 0 1 1 8 19.6L3 21z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8c-1-.4-2-1.4-2.4-2.4l.8-1-1-2L9 8.5z" fill="#fff" stroke="none"/></svg>
+      Chat on Whatsapp</a>
+  </div>
+</header>
+
+<!-- 2. SERVICES -->
+<section class="services wrap" id="services">
+  <div class="sec-head">
+    <h2>Choose the guidance you need</h2>
+    <p>Every session starts with your exact birth details and ends with a written summary you can keep.</p>
+    <hr>
+  </div>
+  <div class="cards" id="cards"></div>
+</section>
+
+<!-- 3. STEPS -->
+<section class="dark steps wrap" id="how">
+  <div class="sec-head">
+    <h2>Your session, step by step</h2>
+    <p>Every session starts with your exact birth details and ends with a written summary you can keep.</p>
+    <hr>
+  </div>
+  <ol class="step-list">
+    <li><b>01.</b><h3>Share your details</h3><p>Send your date, exact time and place of birth. Not sure of the time? We can work with an approximate one.</p></li>
+    <li><b>02.</b><h3>Talk it through</h3><p>Meet on video call, phone or in person at the Delhi studio. Ask anything, there is no script.</p></li>
+    <li><b>03.</b><h3>Take your report home</h3><p>Get a written summary of your chart, the timing to watch and practical next steps you can keep.</p></li>
+  </ol>
+</section>
+
+<!-- 4. ABOUT / VERIFICATIONS -->
+<section class="about wrap" id="about">
+  <div>
+    <h2>Guided by tradition, explained in plain language</h2>
+    <p>Yash trained in Jyotish under his grandfather and later completed a formal Jyotish Visharad programme. He treats a chart as a tool for decisions, so every reading ends with what to do, and when.</p>
+    <p>He will tell you when a chart shows a difficult phase, and he will never push an expensive ritual you do not need.</p>
+    <ul class="chips">
+      <li>Jyotish Visharad certified</li><li>Hindi, English, Punjabi</li>
+      <li>Featured on regional TV</li><li>No fear-based remedies</li>
+    </ul>
+  </div>
+  <div class="video" id="video">Add Video here</div>
+</section>
+
+<!-- 5. REVIEWS -->
+<section class="dark reviews wrap" id="reviews">
+  <figure>
+    <blockquote class="big">“He told me to wait eight months before changing jobs and explained why. I waited, and the offer that came was better than anything I had on the table.”</blockquote>
+    <figcaption class="who">Neha K., Product Manager, Gurugram</figcaption>
+  </figure>
+  <div class="small-reviews">
+    <figure><blockquote>“Our matching report was balanced. It flagged one concern and how to handle it.”</blockquote><figcaption class="who">Rohit and Simran, Noida</figcaption></figure>
+    <figure><blockquote>“Straight answers, no scare tactics. Worth every rupee.”</blockquote><figcaption class="who">Meera S., Delhi</figcaption></figure>
+  </div>
+</section>
+
+<!-- 6. CONTACT -->
+<section class="contact wrap" id="contact">
+  <div class="txt">
+    <h2>Get a free chart preview in 2 minutes</h2>
+    <p>Tell us your birth details and we will send a short summary of your main planetary period. Pay only if you want a full session.</p>
+  </div>
+  <form id="form" novalidate>
+    <label for="name">Full Name</label>
+    <input id="name" name="name" placeholder="Enter your name" autocomplete="name" required>
+    <div class="row">
+      <div><label for="dob">Date of birth</label><input id="dob" name="dob" type="date" required></div>
+      <div><label for="tob">Time of birth</label><input id="tob" name="tob" type="time"></div>
+    </div>
+    <label for="pob">Place of birth</label>
+    <input id="pob" name="pob" placeholder="City, state" required>
+    <label for="topic">I would like help with</label>
+    <div class="sel"><select id="topic" name="topic">
+      <option>Career and Finance</option><option>Marriage and Matching</option><option>Love and Relationships</option><option>Family</option><option>Health and Timing</option>
+    </select></div>
+    <label for="wa">WhatsApp number</label>
+    <input id="wa" name="wa" type="tel" placeholder="+91" autocomplete="tel" required>
+    <button class="btn btn-maroon" type="submit">Book a Session</button>
+    <p class="note">Your details stay private and are used only for your reading.</p>
+    <p id="msg" role="status"></p>
+  </form>
+</section>
+
+<!-- 7. Q&A -->
+<section class="faq wrap" id="faq">
+  <h2>Questions people ask first</h2>
+  <details><summary>What if I do not know my exact birth time?</summary><p>We can work with an approximate time. Yash can narrow it down using key life events, and he will tell you how much confidence to place in each part of the reading.</p></details>
+  <details><summary>Can we meet online?</summary><p>Yes. Sessions run on video call or phone, and you can also visit the Delhi studio. You receive the same written summary either way.</p></details>
+  <details><summary>Will you recommend expensive rituals?</summary><p>No. Remedies are optional, simple and explained in plain language. You will never be pushed into a costly ritual you do not need.</p></details>
+  <details><summary>How accurate are the predictions?</summary><p>Astrology is a belief-based practice and results vary. A chart shows tendencies and timing, so each reading focuses on practical steps rather than fixed outcomes.</p></details>
+</section>
+
+<!-- 8. FOOTER -->
+<footer class="dark wrap">
+  <div class="foot">
+    <div><h4>Yash Sharma</h4><p>Vedic astrology consultations,<br>online and at the Delhi studio.</p></div>
+    <div><h4>Contact</h4><p><a href="tel:+910000000000">+91 0000000000</a><br><a href="mailto:hello@gmail.com">hello@gmail.com</a></p></div>
+    <div><h4>Studio hours</h4><p>Mon to Sat, 10 am to 7 pm<br>Sunday by appointment</p></div>
+  </div>
+  <hr>
+  <p class="legal">Placeholder content for design purposes. Astrology is a belief-based practice and results vary.</p>
+</footer>
+
+<script>
+// Service cards
+const PHONE="+91 0000000000";
+const services=[
+ ["Love Problem Solution","There are many people who need to get family problem solution using astrology surely helps a person to get what they actually want. Consult With Yash Sharma Ji."],
+ ["Get Your Love Back","Being in love but apart is painful don’t let love problems weigh you down when astrology offers trusted ways to reunite. Consult right now"],
+ ["Love Marriage Specialist","Marriage is sacred but can face challenges; astrology helps strengthen the bond and resolve conflicts for a peaceful relationship. Consult right now."],
+ ["Stop Divorce Problem","Astrology offers solutions to prevent divorce. In times of relationship breakdown, it helps maintain and brings couples together again."],
+ ["Ex-Love Back Specialist","Getting a former love back is possible with astrology. It’s a safe and trusted method to fix love life issues."],
+ ["Get GF/ BF Back","If you’re feeling lonely after a breakup, Astrologer Amit Shastri Ji offers the best astrological solutions to bring back your ex."],
+ ["Family Problem Solutions","Family problems? Astrology provides effective solutions. Get the help you need and achieve peace with Astrologer Amit Shastri Ji’s guidance."],
+ ["Childless Problem Solution","Astrology safely resolves love marriage issues, including inter-caste problems, offering the right guidance before or after marriage."],
+ ["Relationship Problem","If your ideal relationship is falling apart, don’t worry. Astrology can help resolve troubles and rebuild love. Connect with us."]
+];
+document.getElementById("cards").innerHTML=services.map((s,i)=>
+ `<article class="card"><img src="images/service-${i+1}.jpg" alt="${s[0]}" loading="lazy"><h3>${s[0]}</h3><p>${s[1]}</p><a class="btn btn-maroon" href="tel:${PHONE.replace(/\s/g,"")}">Call${PHONE}</a></article>`).join("");
+
+// Mobile menu
+const mb=document.querySelector(".menu-btn"),menu=document.getElementById("menu");
+mb.addEventListener("click",()=>{const o=menu.classList.toggle("open");mb.setAttribute("aria-expanded",o)});
+menu.addEventListener("click",e=>{if(e.target.tagName==="A"){menu.classList.remove("open");mb.setAttribute("aria-expanded",false)}});
+
+// FAQ: one open at a time
+document.querySelectorAll("#faq details").forEach(d=>d.addEventListener("toggle",()=>{
+  if(d.open)document.querySelectorAll("#faq details").forEach(o=>{if(o!==d)o.open=false})}));
+
+// Form: opens WhatsApp with the details (replace the number below)
+const WA_NUMBER="910000000000";
+document.getElementById("form").addEventListener("submit",e=>{
+  e.preventDefault();
+  const f=e.target,m=document.getElementById("msg"),v=n=>f[n].value.trim();
+  const digits=v("wa").replace(/\D/g,"");
+  if(!v("name")||!v("dob")||!v("pob")||digits.length<10){
+    m.className="err";m.textContent="Please fill in your name, date and place of birth, and a valid WhatsApp number.";return;
+  }
+  m.className="";m.textContent="Thank you. Opening WhatsApp to send your details.";
+  const t=`Hello Yash Ji, I would like a free chart preview.\nName: ${v("name")}\nDate of birth: ${v("dob")}\nTime of birth: ${v("tob")||"Not sure"}\nPlace of birth: ${v("pob")}\nHelp with: ${v("topic")}\nWhatsApp: ${v("wa")}`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(t)}`,"_blank","noopener");
+  f.reset();
+});
+</script>
+</body>
+</html>
