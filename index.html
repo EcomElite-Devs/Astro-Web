@@ -79,9 +79,10 @@ nav ul a:hover{color:#fff}
 .sec-head p{font-size:clamp(18px,1.9vw,28px);color:var(--muted);margin-top:14px}
 .sec-head hr{border:0;border-top:1px solid var(--line);margin-top:40px;max-width:910px}
 .cards{display:grid;grid-template-columns:repeat(3,minmax(0,360px));gap:36px;justify-content:center;margin-top:40px}
-.card img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:22px;background:#e8cfcf}
-.card h3{font-size:22px;color:var(--maroon);margin:8px 0 6px;font-weight:600}
-.card p{color:var(--muted);font-size:17.5px;line-height:1.45;min-height:7.4em;margin-bottom:18px}
+.card img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:22px;background:#e8cfcf}
+.card h3{font-size:22px;color:var(--maroon);margin:20px 0 6px;font-weight:600}
+.card-stars{color:#ffc400;font-size:19px;letter-spacing:3px;line-height:1;margin:0 0 8px}
+.card p{color:var(--muted);font-size:17.5px;line-height:1.45;min-height:7.4em;margin-bottom:8px}
 
 /* 3. steps */
 .steps{padding-block:40px 40px}
@@ -108,7 +109,7 @@ nav ul a:hover{color:#fff}
 .reviews{padding-block:40px 70px}
 .stars{color:#ffd800;letter-spacing:4px;font-size:22px;line-height:1}
 .person{display:flex;align-items:center;gap:16px;margin-top:14px}
-.person img{width:64px;height:64px;border-radius:50%;object-fit:cover}
+.person img{width:64px;height:64px;border-radius:50%;object-fit:cover; filter: blur(3px);}
 .person b{display:block;font:600 24px var(--sans)}
 .person span{font-size:19px;opacity:.45}
 .reviews blockquote.big{font:700 clamp(24px,2.9vw,40px)/1.2 var(--serif);margin-top:28px;max-width:1400px}
@@ -162,7 +163,7 @@ footer .legal{font-size:20px;margin:0;max-width:none}
 }
 @media (max-width:768px){
   .wa-float{display:none}
-  .sd{display:none}
+  .sd{display:block}
   .hero{padding-bottom:30px}
   nav{padding-block:22px 0}
   .brand b{font-size:21px}.brand span{font-size:16px}
@@ -220,6 +221,7 @@ footer .legal{font-size:20px;margin:0;max-width:none}
   h2{font-size:clamp(28px,3vw,44px)}
   .sec-head p{font-size:clamp(16px,1.5vw,22px)}
   .card h3{font-size:20px}
+  .card-stars{font-size:17px}
   .card p{font-size:16px}
   .step-list b{font-size:38px}
   .step-list h3{font-size:clamp(22px,2.1vw,31px)}
@@ -233,13 +235,33 @@ footer .legal{font-size:20px;margin:0;max-width:none}
   .rcard blockquote{font-size:clamp(16px,1.4vw,21px)}
   summary{font-size:clamp(18px,1.6vw,23px)}
   details p{font-size:17px}
-  .foot{display:grid;grid-template-columns:1fr 1.25fr 1.25fr .9fr auto;gap:30px clamp(24px,3vw,56px);align-items:start}
+  .foot{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:30px clamp(24px,3vw,44px);align-items:start}
+  .footer-contact-block{min-width:0}
+  .footer-contact-block h4{margin-bottom:14px}
+  .footer-contact-line{display:flex;align-items:flex-start;gap:14px;margin:0 0 16px;max-width:none}
+  .footer-contact-line img{width:42px;height:42px;object-fit:contain;flex:0 0 42px}
+  .footer-contact-line span,.footer-contact-line a{color:#FFFFFF66;font-size:16px;line-height:1.55;overflow-wrap:anywhere}
+  .footer-contact-line a:hover{color:#fff}
+  .footer-contact-address img{width:48px;height:48px;flex-basis:48px}
+  .footer-contact-address{align-items:flex-start}
+
   footer h4{font-size:22px}
   footer p,footer li{font-size:16px}
   footer ul{gap:11px;margin-top:12px}
   .foot>div:last-child li{white-space:nowrap}
   footer .legal{font-size:16px}
   .wa-float{width:60px;height:60px}
+}
+
+span.star-review {
+    color: #5b0404;
+}
+
+.footer-contact-line img {
+    width: auto;
+    height: 30px;
+    object-fit: contain;
+    flex: 0 0 42px;
 }
 </style>
 </head>
@@ -329,13 +351,13 @@ footer .legal{font-size:20px;margin:0;max-width:none}
 <section class="dark reviews wrap" id="reviews">
   <figure>
     <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-    <div class="person"><img src="assets/avatar-ella.jpg" alt="" loading="lazy"><div><b>Ella Walker</b><span>Australia</span></div></div>
+    <div class="person"><img src="assets/avatar-ella.jpg" alt="" loading="lazy"><div><b>Kashish Kumar</b><span>Mumbai, India</span></div></div>
     <blockquote class="big">“He told me to wait eight months before changing jobs and explained why. I waited, and the offer that came was better than anything I had on the table.”</blockquote>
   </figure>
   <div class="review-cards">
     <figure class="rcard">
       <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-      <div class="person"><img src="assets/avatar-james.jpg" alt="" loading="lazy"><div><b>James Anderson</b><span>Toronto, Canada</span></div></div>
+      <div class="person"><img src="assets/avatar-james.jpg" alt="" loading="lazy"><div><b>Raghav Goel</b><span>Jaipur, India</span></div></div>
       <blockquote>“I was going through a very difficult phase in my relationship and had no idea what to do. The consultation helped me understand the situation from a completely different perspective. The guidance was detailed and reassuring.”</blockquote>
     </figure>
     <figure class="rcard">
@@ -345,7 +367,7 @@ footer .legal{font-size:20px;margin:0;max-width:none}
     </figure>
     <figure class="rcard">
       <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
-      <div class="person"><img src="assets/avatar-emily.jpg" alt="" loading="lazy"><div><b>Emily Carter</b><span>U.S.</span></div></div>
+      <div class="person"><img src="assets/avatar-emily.jpg" alt="" loading="lazy"><div><b>Kirti Yadav</b><span>UP, India</span></div></div>
       <blockquote>“I approached them after a difficult breakup and was emotionally very confused. The session gave me a lot of clarity and helped me look at the situation more calmly instead of making decisions emotionally.”</blockquote>
     </figure>
   </div>
@@ -366,15 +388,17 @@ footer .legal{font-size:20px;margin:0;max-width:none}
     <div><h4>Yash Sharma</h4><p>Vedic astrology consultations</p></div>
     <div><h4>Services</h4>
       <ul>
+        <li><a href="#services">One Sided love</a></li>
+        <li><a href="#services">Relationship Problems</a></li>
         <li><a href="#services">Love Problem Solution</a></li>
         <li><a href="#services">Get Your Love Back</a></li>
         <li><a href="#services">Love Marriage Specialist</a></li>
-        <li><a href="#services">Stop Divorce Problem</a></li>
-        <li><a href="#services">Ex-Love Back Specialist</a></li>
-        <li><a href="#services">Get GF Back</a></li>
-        <li><a href="#services">Family Problem Solutions</a></li>
-        <li><a href="#services">Childless Marriage Solution</a></li>
-        <li><a href="#services">Relationship Problem</a></li>
+        <li><a href="#services">Husband Wife Disputes</a></li>
+        <li><a href="#services">Ex Love Back</a></li>
+        <li><a href="#services">Get GF/BF Back</a></li>
+        <li><a href="#services">Family Problem Solution</a></li>
+        <li><a href="#services">Childless Problem Solution</a></li>
+        <li><a href="#services">Black Magic Specialist</a></li>
       </ul></div>
     <div><h4>Why Chose Us?</h4>
       <ul>
@@ -382,8 +406,34 @@ footer .legal{font-size:20px;margin:0;max-width:none}
         <li>Expert Astrological Reports</li><li>Expert Love Solution</li><li>Time Saver Solution</li>
         <li>Best Online Solution</li><li>Affordable Solution</li>
       </ul></div>
-    <div><h4>Contact</h4><ul><li><a href="tel:+917014916016">+91 7014916016</a></li></ul></div>
-    <div><h4>Studio hours</h4><ul><li>Mon to Sat, 10 am to 7 pm</li><li>Sunday by appointment</li></ul></div>
+
+    <!-- Added: address and contact details from the supplied reference images -->
+    <div class="footer-contact-block">
+      <h4>Our Address</h4>
+      <div class="footer-contact-line footer-contact-address">
+        <img src="assets/footer-icon-1.png" alt="" loading="lazy">
+        <span>Omkareshwar Mahakal Mandir, Omkareshwar, Khandwa, Madhya Pradesh - 450554</span>
+      </div>
+    </div>
+    <div class="footer-contact-block">
+      <h4>Contact Us</h4>
+      <div class="footer-contact-line">
+        <img src="assets/footer-icon-2.png" alt="" loading="lazy">
+        <span>Sadhak Yash Sharma</span>
+      </div>
+      <div class="footer-contact-line">
+        <img src="assets/footer-icon-3.png" alt="" loading="lazy">
+        <a href="tel:+917014916016">+91-7014916016</a>
+      </div>
+      <!-- <div class="footer-contact-line">
+        <img src="assets/footer-icon-4.png" alt="" loading="lazy">
+        <a href="https://wa.me/917014916016" target="_blank" rel="noopener">+91-7014916016</a>
+      </div> -->
+      <div class="footer-contact-line footer-contact-address">
+        <img src="assets/footer-icon-5.png" alt="" loading="lazy">
+        <span>Kamakshya Temples' Complex, Nilachala Hills, P.O. Kamakhya, Guwahati, Assam, Pin-781010</span>
+      </div>
+    </div>
   </div>
   <hr>
   <p class="legal">Astrology is a belief-based practice and results vary.</p>
@@ -406,18 +456,20 @@ footer .legal{font-size:20px;margin:0;max-width:none}
 <script>
 const PHONE="+917014916016", PHONE_LABEL="+91 7014916016";
 const services=[
- ["Love Problem Solution","There are many people who need to get family problem solution using astrology surely helps a person to get what they actually want. Consult With Yash Sharma Ji."],
- ["Get Your Love Back","Being in love but apart is painful don’t let love problems weigh you down when astrology offers trusted ways to reunite. Consult right now"],
- ["Love Marriage Specialist","Marriage is sacred but can face challenges; astrology helps strengthen the bond and resolve conflicts for a peaceful relationship. Consult right now."],
- ["Stop Divorce Problem","Astrology offers solutions to prevent divorce. In times of relationship breakdown, it helps maintain and brings couples together again."],
- ["Ex-Love Back Specialist","Getting a former love back is possible with astrology. It’s a safe and trusted method to fix love life issues."],
- ["Get GF/ BF Back","If you’re feeling lonely after a breakup, Astrologer Amit Shastri Ji offers the best astrological solutions to bring back your ex."],
- ["Family Problem Solutions","Family problems? Astrology provides effective solutions. Get the help you need and achieve peace with Astrologer Amit Shastri Ji’s guidance."],
- ["Childless Problem Solution","Astrology safely resolves love marriage issues, including inter-caste problems, offering the right guidance before or after marriage."],
- ["Relationship Problem","If your ideal relationship is falling apart, don’t worry. Astrology can help resolve troubles and rebuild love. Connect with us."]
+ ["One Sided love","Experiencing one-sided love can be emotionally challenging. Get personalized astrological guidance to understand your feelings, navigate relationship uncertainties, and find clarity about your love life. Consult with Yash Sharma Ji."],
+ ["Relationship Problems","If your relationship is facing difficulties, you don't have to navigate them alone. Get personalized guidance to understand potential challenges, improve communication, and explore ways to rebuild trust and connection."],
+ ["Love Problem Solution","There are many people facing relationship and family problems. Astrology offers guidance to help you understand your situation and find a path toward a happier relationship. Consult with Yash Sharma Ji."],
+ ["Get Your Love Back","Being in love but apart can be painful. Astrology offers traditional guidance for navigating love problems and understanding the possibilities of reconciliation with your former partner. Consult today."],
+ ["Love Marriage Specialist","Marriage is sacred, but relationships can face challenges. Get astrological guidance to address relationship conflicts, strengthen your bond, and work toward a peaceful married life."],
+ ["Husband Wife Disputes","Facing conflicts or misunderstandings in your marriage? Get personalized astrological guidance to navigate marital challenges, improve mutual understanding, and work toward restoring peace, trust, and harmony in your relationship. Consult with Yash Sharma Ji."],
+ ["Ex Love Back","Hoping to reconnect with a former partner? Get astrological guidance to understand your relationship situation and explore possibilities for reconciliation and emotional clarity."],
+ ["Get GF/BF Back","Feeling lonely after a breakup? Get personalized astrological guidance to help you navigate separation, understand relationship challenges, and decide how to move forward."],
+ ["Family Problem Solution","Family conflicts can create stress and misunderstandings. Astrology-based guidance can help you reflect on family challenges and explore ways to encourage harmony, mutual understanding, and stronger relationships."],
+ ["Childless Problem Solution","Experiencing concerns about starting a family? Receive compassionate astrological guidance for emotional and spiritual support while navigating your journey toward parenthood. For fertility concerns, consult a qualified medical professional as well."],
+ ["Black Magic Specialist","Worried about negative energy or unexplained challenges in your relationship? Get traditional astrological guidance and spiritual support to address your concerns, find peace of mind, and work toward harmony in your personal life."]
 ];
 document.getElementById("cards").innerHTML=services.map((s,i)=>
- `<article class="card"><img src="assets/service-${i+1}.jpg" alt="${s[0]}" loading="lazy"><h3>${s[0]}</h3><p>${s[1]}</p><a class="btn btn-maroon" href="tel:${PHONE}">Call ${PHONE_LABEL}</a></article>`).join("");
+ `<article class="card"><img src="assets/service-${i+1}.jpeg" alt="${s[0]}" loading="lazy"><h3>${s[0]}</h3><div class="card-stars" role="img" aria-label="Rated 5 out of 5 stars">★★★★★<span class="star-review">5 star review</span></div><p>${s[1]}</p><a class="btn btn-maroon" href="tel:${PHONE}">Call ${PHONE_LABEL}</a></article>`).join("");
 
 // Count-up numbers
 const reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;
